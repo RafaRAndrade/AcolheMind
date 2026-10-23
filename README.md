@@ -17,7 +17,7 @@
 * **Integrantes do Grupo:**
   * Sarah
   * Rafaela Rodrigues de Andrade — RA: 2026103914 - @RafaelaRAndrade
-  * *[Nome do Integrante 2]* — RA: *[Insira o RA]*
+  * Leticia Albuquerque Oliveira — RA: 2026108965 - @leticia-albuquerqu
   * *[Nome do Integrante 3]* — RA: *[Insira o RA]*
   * *[Nome do Integrante 4]* — RA: *[Insira o RA]*
 
