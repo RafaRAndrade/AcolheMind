@@ -1,0 +1,26 @@
+@keyframes pulseRing {
+    0% { transform: scale(0.95); opacity: 0.85; }
+    50% { transform: scale(1.25); opacity: 0.45; }
+    100% { transform: scale(0.95); opacity: 0.85; }
+}
+
+.breathing-circle {
+    animation: pulseRing 8s ease-in-out infinite;
+}
+
+.paused-anim {
+    animation-play-state: paused;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}

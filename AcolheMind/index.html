@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcolheMind - Apoio Emocional e Bem-Estar</title>
+    <script src="tailwind.config.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-warmBg text-slate-700 font-sans antialiased min-h-screen flex flex-col md:flex-row">
+
+    <!-- Mobile Header Navigation -->
+    <header class="md:hidden bg-white border-b border-slate-100 p-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-400 to-mint-300 flex items-center justify-center text-white shadow-sm">
+                <i data-lucide="heart" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="font-bold text-lg text-slate-800 tracking-tight">Acolhe<span class="text-brand-600">Mind</span></span>
+        </div>
+        <button id="mobileMenuBtn" class="p-2 text-slate-600 hover:text-brand-600 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="hidden md:flex flex-col w-64 bg-white border-r border-slate-100 p-5 shrink-0 justify-between fixed md:relative inset-y-0 left-0 z-40 transition-all duration-200">
+        <div>
+            <!-- Logo -->
+            <div class="flex items-center gap-3 px-2 py-3 mb-6">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-500 to-mint-300 flex items-center justify-center text-white shadow-md shadow-brand-100">
+                    <i data-lucide="heart" class="w-6 h-6 fill-current"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl text-slate-800 tracking-tight leading-tight">Acolhe<span class="text-brand-600">Mind</span></h1>
+                    <p class="text-xs text-slate-400">Apoio & Bem-Estar</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="space-y-1" id="navLinks">
+                <button onclick="switchTab('dashboard', this)" class="nav-btn active flex items-center gap-3 w-full px-4 py-3 rounded-xl font-medium text-sm transition-colors text-brand-700 bg-brand-50">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Início</span>
+                </button>
+                <button onclick="switchTab('mood', this)" class="nav-btn flex items-center gap-3 w-full px-4 py-3 rounded-xl font-medium text-sm transition-colors text-slate-600 hover:bg-slate-50">
+                    <i data-lucide="smile" class="w-5 h-5"></i>
+                    <span>Registo de Humor</span>
+                </button>
+                <button onclick="switchTab('breathing', this)" class="nav-btn flex items-center gap-3 w-full px-4 py-3 rounded-xl font-medium text-sm transition-colors text-slate-600 hover:bg-slate-50">
+                    <i data-lucide="wind" class="w-5 h-5"></i>
+                    <span>Respiração Guiada</span>
+                </button>
+                <button onclick="switchTab('chat', this)" class="nav-btn flex items-center gap-3 w-full px-4 py-3 rounded-xl font-medium text-sm transition-colors text-slate-600 hover:bg-slate-50">
+                    <i data-lucide="message-circle-heart" class="w-5 h-5"></i>
+                    <span>AcolheBot</span>
+                </button>
+                <button onclick="switchTab('relax', this)" class="nav-btn flex items-center gap-3 w-full px-4 py-3 rounded-xl font-medium text-sm transition-colors text-slate-600 hover:bg-slate-50">
+                    <i data-lucide="headphones" class="w-5 h-5"></i>
+                    <span>Sons de Relaxamento</span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- User profile preview -->
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-mint-100 text-mint-700 font-semibold flex items-center justify-center text-sm border border-mint-200">
+                    AM
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-slate-800">Ana Maria</p>
+                    <p class="text-xs text-slate-400">Plano Acolher</p>
+                </div>
+            </div>
+            <button class="text-slate-400 hover:text-slate-600 p-1">
+                <i data-lucide="settings" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full overflow-y-auto">
+
+        <!-- Banner / Welcome Header -->
+        <header class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-gradient-to-r from-brand-50 via-mint-50 to-emerald-50/30 p-6 rounded-3xl border border-brand-100/60 shadow-sm">
+            <div>
+                <span class="inline-block px-3 py-1 bg-white text-brand-700 text-xs font-semibold rounded-full mb-2 shadow-xs border border-brand-100">
+                    ✨ Espaço de Acolhimento AcolheMind
+                </span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Olá, Ana Maria! Como você se sente hoje?</h2>
+                <p class="text-slate-600 text-sm mt-1">Lembre-se: respeite o seu ritmo. Cada dia é um passo único na sua jornada.</p>
+            </div>
+            <button onclick="navigateToTab('mood')" class="self-start md:self-auto px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-2xl shadow-md shadow-brand-200 transition-all flex items-center gap-2 text-sm">
+                <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                Registar Sentimento
+            </button>
+        </header>
+
+        <!-- Dynamic Tab Contents -->
+        
+        <!-- SEÇÃO 1: DASHBOARD / VISÃO GERAL -->
+        <section id="tab-dashboard" class="tab-content space-y-6">
+            
+            <!-- Quick Mood Check & Daily Affirmation Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Affirmation Card -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-mint-100 rounded-full blur-2xl opacity-60"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold text-mint-700 bg-mint-50 px-3 py-1 rounded-full border border-mint-200">
+                                Frase do Dia
+                            </span>
+                            <i data-lucide="sparkles" class="w-5 h-5 text-mint-500"></i>
+                        </div>
+                        <blockquote class="text-lg md:text-xl font-medium text-slate-800 leading-relaxed italic">
+                            "Eu me permito desacelerar. Minha paz mental é uma prioridade e estou seguro no presente."
+                        </blockquote>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-50">
+                        <span>Inspiração AcolheMind • Atualizado hoje</span>
+                        <button onclick="shareAffirmation()" class="text-brand-600 font-medium hover:underline flex items-center gap-1">
+                            <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fast Mood Widget -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-1">Check-in Rápido</h3>
+                        <p class="text-xs text-slate-500 mb-4">Como está sua energia neste instante?</p>
+                        
+                        <div class="grid grid-cols-5 gap-2 text-center">
+                            <button onclick="quickMood('Feliz')" class="p-2.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-600 transition-all flex flex-col items-center gap-1">
+                                <span class="text-xl">😊</span>
+                                <span class="text-[10px] font-medium">Feliz</span>
+                            </button>
+                            <button onclick="quickMood('Calmo')" class="p-2.5 rounded-2xl bg-mint-50 hover:bg-mint-100 text-mint-600 transition-all flex flex-col items-center gap-1">
+                                <span class="text-xl">😌</span>
+                                <span class="text-[10px] font-medium">Calmo</span>
+                            </button>
+                            <button onclick="quickMood('Ansioso')" class="p-2.5 rounded-2xl bg-sky-50 hover:bg-sky-100 text-sky-600 transition-all flex flex-col items-center gap-1">
+                                <span class="text-xl">😰</span>
+                                <span class="text-[10px] font-medium">Ansioso</span>
+                            </button>
+                            <button onclick="quickMood('Triste')" class="p-2.5 rounded-2xl bg-indigo-50 hover:bg-indigo-100 text-indigo-600 transition-all flex flex-col items-center gap-1">
+                                <span class="text-xl">😢</span>
+                                <span class="text-[10px] font-medium">Triste</span>
+                            </button>
+                            <button onclick="quickMood('Cansado')" class="p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-all flex flex-col items-center gap-1">
+                                <span class="text-xl">😴</span>
+                                <span class="text-[10px] font-medium">Cansado</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="quickMoodResponse" class="mt-3 text-xs text-emerald-600 bg-emerald-50 p-2.5 rounded-xl hidden text-center border border-emerald-100">
+                        Check-in salvo com carinho no AcolheMind!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Quick Access Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Respiração -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer" onclick="navigateToTab('breathing')">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                        <i data-lucide="wind" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Exercício de Respiração</h3>
+                    <p class="text-slate-500 text-sm mb-4">Acalme o sistema nervoso com a técnica guiada 4-7-8.</p>
+                    <span class="text-brand-600 font-semibold text-xs flex items-center gap-1">
+                        Iniciar Sessão <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                </div>
+
+                <!-- Card 2: Chat Acolhedor -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer" onclick="navigateToTab('chat')">
+                    <div class="w-12 h-12 rounded-2xl bg-mint-50 text-mint-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                        <i data-lucide="message-circle-heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">AcolheBot Assistente</h3>
+                    <p class="text-slate-500 text-sm mb-4">Um espaço seguro sem julgamentos para desabafar agora.</p>
+                    <span class="text-mint-600 font-semibold text-xs flex items-center gap-1">
+                        Abrir Conversa <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                </div>
+
+                <!-- Card 3: Sons de Relaxamento -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer" onclick="navigateToTab('relax')">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                        <i data-lucide="headphones" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Sons & Paisagens</h3>
+                    <p class="text-slate-500 text-sm mb-4">Chuva suave, ondas do mar e ruído para focar ou dormir.</p>
+                    <span class="text-purple-600 font-semibold text-xs flex items-center gap-1">
+                        Ouvir Sons <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Community Support Banner -->
+            <div class="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                        <i data-lucide="users" class="w-6 h-6 text-brand-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Comunidade AcolheMind</h4>
+                        <p class="text-slate-300 text-sm">Participe dos nossos grupos virtuais de escuta empática de hoje.</p>
+                    </div>
+                </div>
+                <button class="px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-medium rounded-xl text-sm transition-colors shrink-0">
+                    Ver Horários dos Grupos
+                </button>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: REGISTO DE HUMOR (MOOD TRACKER) -->
+        <section id="tab-mood" class="tab-content space-y-6 hidden">
+            <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Seu Registo de Emoções</h3>
+                <p class="text-slate-500 text-sm mb-6">Acompanhar como você se sente no AcolheMind ajuda a identificar padrões e cuidar melhor de você.</p>
+
+                <form id="moodForm" onsubmit="saveMoodEntry(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-3">Qual a sua emoção predominante agora?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="moodSelect" value="Feliz" class="peer hidden" checked>
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 peer-checked:border-amber-400 peer-checked:bg-amber-50/50 flex flex-col items-center gap-2 transition-all">
+                                    <span class="text-3xl">😊</span>
+                                    <span class="text-xs font-semibold text-slate-700">Feliz / Leve</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="moodSelect" value="Calmo" class="peer hidden">
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 peer-checked:border-mint-400 peer-checked:bg-mint-50/50 flex flex-col items-center gap-2 transition-all">
+                                    <span class="text-3xl">😌</span>
+                                    <span class="text-xs font-semibold text-slate-700">Calmo / Em paz</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="moodSelect" value="Ansioso" class="peer hidden">
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 peer-checked:border-sky-400 peer-checked:bg-sky-50/50 flex flex-col items-center gap-2 transition-all">
+                                    <span class="text-3xl">😰</span>
+                                    <span class="text-xs font-semibold text-slate-700">Ansioso</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="moodSelect" value="Triste" class="peer hidden">
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 peer-checked:border-indigo-400 peer-checked:bg-indigo-50/50 flex flex-col items-center gap-2 transition-all">
+                                    <span class="text-3xl">😢</span>
+                                    <span class="text-xs font-semibold text-slate-700">Triste</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="moodSelect" value="Cansado" class="peer hidden">
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 peer-checked:border-slate-400 peer-checked:bg-slate-100 flex flex-col items-center gap-2 transition-all">
+                                    <span class="text-3xl">😴</span>
+                                    <span class="text-xs font-semibold text-slate-700">Esgotado</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="moodNote" class="block text-sm font-medium text-slate-700 mb-2">Nota ou pensamentos do dia (Opcional)</label>
+                        <textarea id="moodNote" rows="3" class="w-full p-4 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400 text-sm" placeholder="O que pode ter influenciado como você se sente hoje?..."></textarea>
+                    </div>
+
+                    <button type="submit" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl text-sm transition-colors shadow-md shadow-brand-100">
+                        Guardar no Diário
+                    </button>
+                </form>
+            </div>
+
+            <!-- Histórico de Registos -->
+            <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                <h4 class="font-bold text-slate-800 mb-4">Histórico de Registos</h4>
+                <div id="moodHistory" class="space-y-3">
+                    <div class="p-4 rounded-2xl bg-slate-50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">😌</span>
+                            <div>
+                                <p class="font-medium text-slate-800 text-sm">Calmo / Em paz</p>
+                                <p class="text-xs text-slate-500">"Consegui fazer uma caminhada à tarde e respirar melhor."</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-slate-400">Ontem</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: RESPIRAÇÃO GUIADA -->
+        <section id="tab-breathing" class="tab-content space-y-6 hidden">
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center max-w-2xl mx-auto flex flex-col items-center">
+                <span class="px-3 py-1 bg-mint-50 text-mint-700 text-xs font-semibold rounded-full border border-mint-200 mb-4">
+                    Técnica 4-7-8 AcolheMind
+                </span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Respiração de Descompressão</h3>
+                <p class="text-slate-500 text-sm max-w-md mb-8">Inspire o ar suavemente, segure e solte devagar. Siga o movimento do círculo para acalmar a mente.</p>
+
+                <!-- Circle Animation Container -->
+                <div class="relative w-64 h-64 flex items-center justify-center my-6">
+                    <div id="breathCircle" class="breathing-circle paused-anim w-48 h-48 rounded-full bg-gradient-to-tr from-brand-300 via-mint-200 to-brand-100 opacity-80 flex items-center justify-center shadow-lg transition-all duration-1000">
+                        <div class="w-36 h-36 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-center p-4">
+                            <span id="breathText" class="font-bold text-slate-700 text-base">Pronto?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex items-center gap-4 mt-6">
+                    <button id="startBreathBtn" onclick="toggleBreathing()" class="px-8 py-3 bg-mint-500 hover:bg-mint-600 text-white font-medium rounded-2xl shadow-md shadow-mint-100 transition-all flex items-center gap-2">
+                        <i data-lucide="play" class="w-4 h-4"></i> Iniciar
+                    </button>
+                    <button onclick="resetBreathing()" class="p-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-2xl transition-colors">
+                        <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: ACOLHEBOT (ASSISTENTE DE APOIO EMOCIONAL) -->
+        <section id="tab-chat" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm h-[550px] flex flex-col overflow-hidden">
+                <!-- Chat Header -->
+                <div class="p-4 bg-slate-50 border-b border-slate-100 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-400 to-mint-300 flex items-center justify-center text-white">
+                        <i data-lucide="bot" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">AcolheBot</h4>
+                        <p class="text-xs text-emerald-600 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Assistente de Escuta Ativa AcolheMind
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm">
+                    <div class="flex gap-3 max-w-[80%]">
+                        <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 text-xs font-bold">
+                            AB
+                        </div>
+                        <div class="bg-slate-100 p-3.5 rounded-2xl rounded-tl-none text-slate-700">
+                            Olá, Ana Maria. Sou o AcolheBot. Este é um espaço seguro e acolhedor, totalmente livre de julgamentos. Como posso te apoiar neste momento?
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="p-3 border-t border-slate-100 bg-white">
+                    <form onsubmit="sendChatMessage(event)" class="flex gap-2">
+                        <input id="chatInput" type="text" class="flex-1 px-4 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400 text-sm" placeholder="Digite o que está sentindo...">
+                        <button type="submit" class="px-5 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-2xl text-sm font-medium transition-colors">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: SONS DE RELAXAMENTO -->
+        <section id="tab-relax" class="tab-content space-y-6 hidden">
+            <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-800 mb-1">Sons de Relaxamento</h3>
+                <p class="text-slate-500 text-sm mb-6">Paisagens sonoras selecionadas pelo AcolheMind para acalmar a mente, ajudar no sono ou focar nas tarefas.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    
+                    <!-- Sound 1 -->
+                    <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-800 text-sm">Chuva Suave</h5>
+                                <p class="text-xs text-slate-400">Ruído constante e relaxante</p>
+                            </div>
+                        </div>
+                        <button onclick="toggleAudio(this)" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Sound 2 -->
+                    <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center">
+                                <i data-lucide="waves" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-800 text-sm">Ondas do Mar</h5>
+                                <p class="text-xs text-slate-400">Ritmo calmo e constante</p>
+                            </div>
+                        </div>
+                        <button onclick="toggleAudio(this)" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Sound 3 -->
+                    <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                                <i data-lucide="trees" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-800 text-sm">Floresta ao Vento</h5>
+                                <p class="text-xs text-slate-400">Ambiente e pássaros suaves</p>
+                            </div>
+                        </div>
+                        <button onclick="toggleAudio(this)" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
