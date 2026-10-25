@@ -18,7 +18,7 @@
   * Sarah
   * Rafaela Rodrigues de Andrade — RA: 2026103914 - @RafaelaRAndrade
   * Leticia Albuquerque Oliveira — RA: 2026108965 - @leticia-albuquerqu
-  * *[Nome do Integrante 3]* — RA: *[Insira o RA]*
+  * Amanda Vitoria Borges Santos — RA: 2026102373 - @borgesamandaaa
   * *[Nome do Integrante 4]* — RA: *[Insira o RA]*
 
 ---
