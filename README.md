@@ -20,7 +20,7 @@
   * Leticia Albuquerque Oliveira — RA: 2026108965 - @leticia-albuquerqu
   * Amanda Vitoria Borges Santos — RA: 2026102373 - @borgesamandaaa
   * Ana Julia dos Reis Sila — RA: 2026107910 -
-  * Sarah dos Santos — RA: 2026111956 - 
+  * Sarah dos Santos — RA: 2026111956 - @sarahsantos152007-prog
 
 ---
 
@@ -94,6 +94,9 @@ O logo do **AcolheMind** combina o símbolo de um cérebro/mente estilizado envo
 
 ![Descrição da imagem](./imagens/logo.png)
 
+### Tipografia
+Poppins para títulos
+Inter para textos e descrições
 
 ### Paleta de Cores Definição e Aplicação
 A paleta foi desenhada focando em acalmar a vista em momentos de estresse, utilizando o azul como cor base e tons funcionais de alto contraste para a usabilidade do aplicativo:
