@@ -98,7 +98,7 @@ O logo do **AcolheMind** combina o símbolo de um cérebro/mente estilizado envo
 ### Paleta de Cores Definição e Aplicação
 A paleta foi desenhada focando em acalmar a vista em momentos de estresse, utilizando o azul como cor base e tons funcionais de alto contraste para a usabilidade do aplicativo:
 
-![Descrição da imagem](.imagens/paleta_cores.png)
+![Descrição da imagem](./imagens/paleta_cores.png)
 
 ```text
 ========================================================================================
