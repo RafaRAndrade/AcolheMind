@@ -19,7 +19,8 @@
   * Rafaela Rodrigues de Andrade — RA: 2026103914 - @RafaelaRAndrade
   * Leticia Albuquerque Oliveira — RA: 2026108965 - @leticia-albuquerqu
   * Amanda Vitoria Borges Santos — RA: 2026102373 - @borgesamandaaa
-  * *[Nome do Integrante 4]* — RA: *[Insira o RA]*
+  * Ana Julia dos Reis Sila — RA: 2026107910 -
+  * Sarah dos Santos — RA: 2026111956 - 
 
 ---
 
@@ -91,11 +92,13 @@ O **AcolheMind** é uma plataforma móvel e PWA (Progressive Web App) focada em 
 ### Logotipo Conceitual
 O logo do **AcolheMind** combina o símbolo de um cérebro/mente estilizado envolvido por traços orgânicos em formato de abraço/mãos de acolhimento, transmitindo suporte técnico alinhado com empatia humana.
 
-![Descrição da imagem](./imagens/logo_alta_qualidade.pdf)
+![Descrição da imagem](./imagens/logo.png)
 
 
 ### Paleta de Cores Definição e Aplicação
 A paleta foi desenhada focando em acalmar a vista em momentos de estresse, utilizando o azul como cor base e tons funcionais de alto contraste para a usabilidade do aplicativo:
+
+![Descrição da imagem](.imagens/paleta_cores.png)
 
 ```text
 ========================================================================================
@@ -106,8 +109,3 @@ COR                     HEX       APLICAÇÃO E HIERARQUIA DE UI/UX
 [ Branco ]             #FFFFFF   -> Fundo de cards e superfíces
 [ Cinza-escuro ]       #555B61   -> Subtítulos, legendas, datas e metadados.
 ========================================================================================
-
-![Descrição da imagem](.imagens/paleta_cores.jpg)
-
-
-### Tipografia
