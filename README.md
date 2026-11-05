@@ -15,7 +15,6 @@
 * **Desafio:** ODS 3 da ONU — Saúde e Bem-Estar
 * **Semestre:** 2º Semestre
 * **Integrantes do Grupo:**
-  * Sarah
   * Rafaela Rodrigues de Andrade — RA: 2026103914 - @RafaelaRAndrade
   * Leticia Albuquerque Oliveira — RA: 2026108965 - @leticia-albuquerqu
   * Amanda Vitoria Borges Santos — RA: 2026102373 - @borgesamandaaa
