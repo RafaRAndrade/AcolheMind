@@ -58,7 +58,7 @@ Para garantir fundamentação estatística e epidemiológica real ao problema, a
 O **AcolheMind** é uma plataforma móvel e PWA (Progressive Web App) focada em **UX de baixo esforço cognitivo sob estresse (*Low-Cognitive Load UX*)**. O ecossistema cobre 4 momentos da vida do cuidador:
 
 * **Momentos de crise (Guia SOS Anticrise):** em poucos toques, o cuidador seleciona o comportamento observado e recebe instruções visuais e táteis de autorregulação e descompressão, com funcionamento *Off-line First* (mesmo sem internet).
-* **O dia a dia (Diário de Gatilhos & Conteúdos):**mapeamento simplificado de rotina, alimentação e eventos antecedentes, gerando relatórios úteis para consultas médicas, além de trilhas curtas de orientação após o cadastro do perfil da família.
+* **O dia a dia (Diário de Gatilhos & Conteúdos):** mapeamento simplificado de rotina, alimentação e eventos antecedentes, gerando relatórios úteis para consultas médicas, além de trilhas curtas de orientação após o cadastro do perfil da família.
 * **O cuidado com quem Cuida (Apoio ao Cuidador):** Check-in de bem-estar da saúde mental do responsável, pausa guiada pós-crise e acesso a grupos de apoio mediados.
 * **Acompanhamento profissional (Telepsicologia):** Plataforma para agendamento e realização de consultas remotas com psicólogos credenciados (com modalidades para a criança/família e para o próprio cuidador), integrada a planos corporativos e convênios.
 
