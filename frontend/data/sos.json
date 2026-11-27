@@ -1,0 +1,467 @@
+{
+ "emg": "(nao respira|sem respirar|parou de respirar|dificuldade (para|de) respirar|falta de ar|engasg|desmai|desacordad|inconsciente|perdeu a consciencia|nao acorda|nao desperta|convuls|sangr|engoliu|ingeriu|intoxic|veneno|overdose|afog|queimadura|fratur|osso quebrado|quer morrer|se matar|suicid|enforc|labios roxos|ficou roxo|ficou roxa)",
+ "sit": [
+  {
+   "id": "auto",
+   "nome": "Autoagressão",
+   "cat": 0,
+   "pri": 7,
+   "kw": [
+    "se machucando",
+    "se machucar",
+    "se machuca",
+    "se machucou",
+    "machucar a si",
+    "a si mesmo",
+    "a si mesma",
+    "bater a cabeca",
+    "batendo a cabeca",
+    "bate a cabeca",
+    "bateu a cabeca",
+    "batendo cabeca",
+    "cabecada*",
+    "se bater",
+    "se batendo",
+    "se bate",
+    "se bateu",
+    "se morder",
+    "se mordendo",
+    "se morde",
+    "se mordeu",
+    "se arranhar",
+    "se arranhando",
+    "se arranha",
+    "se beliscando",
+    "se belisca",
+    "se cortando",
+    "se ferindo",
+    "se ferir",
+    "autoagress*",
+    "autolesao",
+    "propria mao",
+    "propria pele"
+   ],
+   "all": [
+    [
+     [
+      "bater",
+      "batendo",
+      "bate",
+      "bateu",
+      "bato"
+     ],
+     [
+      "cabeca",
+      "cabecas"
+     ]
+    ]
+   ],
+   "resp": {
+    "ac": "Sinto muito que vocês estejam passando por isso. Você não está sozinho(a), e está fazendo o melhor que pode agora.",
+    "pode": "Esse comportamento pode ter várias causas: dor ou desconforto físico, excesso de barulho, luz ou pessoas, frustração, dificuldade de se comunicar ou muita agitação. Só uma avaliação profissional consegue entender o motivo no caso da sua criança.",
+    "fazer": [
+     "Priorize a segurança: se der para fazer sem se colocar em risco, afaste objetos duros ou perigosos do caminho.",
+     "Reduza os estímulos: diminua o barulho e a luz e peça que pessoas desnecessárias se afastem.",
+     "Fale com calma, em frases curtas, como “Eu estou aqui”.",
+     "Observe sinais de dor ou desconforto: ouvido, dentes, barriga, roupa apertada, fome ou sono.",
+     "Quando a crise passar, veja se há algum ferimento e cuide dele. Se for importante, procure atendimento."
+    ],
+    "evitar": [
+     "Não segure a criança à força nem improvise contenção física.",
+     "Não grite, não ameace e não puna.",
+     "Não faça muitas perguntas nem peça explicações agora.",
+     "Não deixe a criança sozinha enquanto houver risco."
+    ],
+    "ajuda": [
+     "Ligue 192 (SAMU) se houver ferimento grave, sangramento que não para, pancada forte na cabeça com sonolência, vômito ou confusão, ou desmaio.",
+     "Procure um profissional de saúde se isso se repetir, aumentar ou surgir de repente.",
+     "Converse com a equipe que acompanha a criança sobre estratégias seguras para esses momentos."
+    ]
+   }
+  },
+  {
+   "id": "agr",
+   "nome": "Agressividade e risco de machucar outras pessoas",
+   "cat": 0,
+   "pri": 6,
+   "kw": [
+    "agress*",
+    "batendo em mim",
+    "batendo nos outros",
+    "batendo no",
+    "batendo na",
+    "bate em mim",
+    "bateu em mim",
+    "bater em mim",
+    "bater nos outros",
+    "tentando machucar",
+    "tenta machucar",
+    "quer machucar",
+    "machucar os outros",
+    "machucar alguem",
+    "machucar outras pessoas",
+    "machucando os outros",
+    "machucando alguem",
+    "machucou alguem",
+    "jogando objeto*",
+    "jogando coisa*",
+    "jogou objeto*",
+    "joga objeto*",
+    "jogando brinquedo*",
+    "empurr*",
+    "chutando",
+    "chutou",
+    "chuta",
+    "mordendo os outros",
+    "mordeu alguem",
+    "morde os outros",
+    "violent*",
+    "arremess*"
+   ],
+   "all": [
+    [
+     [
+      "bater",
+      "batendo",
+      "bate",
+      "bateu"
+     ],
+     [
+      "em mim",
+      "nos outros",
+      "em outras pessoas",
+      "no irmao",
+      "na irma",
+      "na mae",
+      "no pai",
+      "nos colegas",
+      "em alguem",
+      "na professora",
+      "no coleguinha",
+      "na gente"
+     ]
+    ]
+   ],
+   "resp": {
+    "ac": "Isso deve ser muito difícil e assustador. Respire fundo: o mais importante agora é a segurança de todos.",
+    "pode": "A agressividade pode aparecer quando a criança está sobrecarregada, assustada, frustrada, sem conseguir se comunicar ou sentindo dor ou desconforto. Não quer dizer que ela queira machucar de propósito, e só um profissional pode avaliar o motivo.",
+    "fazer": [
+     "Proteja a todos: se possível, afaste outras pessoas e objetos que possam machucar, sem perder a criança de vista.",
+     "Diminua os estímulos: menos barulho, menos luz e menos gente por perto.",
+     "Fale baixo e devagar, com frases curtas, e mantenha o corpo relaxado.",
+     "Dê espaço, com supervisão por perto, até a criança se acalmar.",
+     "Depois que passar, ofereça água e um tempo tranquilo. Converse só quando ela estiver calma."
+    ],
+    "evitar": [
+     "Não grite, não ameace e não entre em confronto.",
+     "Não use força nem prenda a criança.",
+     "Não dê sermão nem discuta no meio da crise.",
+     "Não puna depois pelo que aconteceu durante a crise."
+    ],
+    "ajuda": [
+     "Ligue 192 (SAMU) se alguém se machucar de forma séria ou se você não conseguir manter todos em segurança.",
+     "Procure um profissional se os episódios forem frequentes, piorarem ou colocarem alguém em risco.",
+     "Registre no diário o que aconteceu antes: isso ajuda a perceber padrões."
+    ]
+   }
+  },
+  {
+   "id": "comer",
+   "nome": "Recusa alimentar",
+   "cat": 3,
+   "pri": 4,
+   "kw": [
+    "nao quer comer",
+    "nao quer mais comer",
+    "nao esta comendo",
+    "nao come",
+    "nao comeu",
+    "nao aceita comida",
+    "nao aceita alimento*",
+    "recusa alimentar",
+    "recusando alimento*",
+    "recusando comida",
+    "recusa comida",
+    "recusou comida",
+    "recusando a comida",
+    "nao come ha horas",
+    "sem comer",
+    "nao quer almocar",
+    "nao quer jantar",
+    "nao quer lanchar",
+    "seletividade alimentar",
+    "nao aceita beber",
+    "nao quer beber",
+    "nao esta bebendo",
+    "nao aceita agua",
+    "nao aceita liquido*",
+    "nao toma agua",
+    "recusando agua",
+    "sem beber"
+   ],
+   "all": [
+    [
+     [
+      "nao",
+      "recus*",
+      "sem",
+      "nega",
+      "negando",
+      "rejeit*"
+     ],
+     [
+      "comer",
+      "comida",
+      "comidas",
+      "alimento*",
+      "alimentacao",
+      "refeicao",
+      "refeicoes",
+      "almoco",
+      "janta",
+      "jantar",
+      "cafe da manha",
+      "lanche"
+     ]
+    ]
+   ],
+   "resp": {
+    "ac": "Entendo a preocupação. Quando uma criança não quer comer, é natural ficar aflito(a).",
+    "pode": "A recusa pode ter relação com texturas, cheiros ou mudanças na rotina, mas também com dor, enjoo, mal-estar ou outros sintomas físicos. Não dá para presumir que seja só comportamento.",
+    "fazer": [
+     "Observe sinais de mal-estar: dor de barriga ou de dente, vômito, febre ou cansaço fora do normal.",
+     "Veja se ela está aceitando líquidos e ofereça água ou o que costuma tomar, aos poucos.",
+     "Não force a comida nem transforme isso em briga. Ofereça de novo mais tarde, em um ambiente calmo.",
+     "Ofereça alimentos que ela já aceita, sem pressão.",
+     "Anote há quanto tempo está assim e o que mudou na rotina, e converse com um profissional de saúde."
+    ],
+    "evitar": [
+     "Não force, não ameace e não faça chantagem.",
+     "Não use comida como prêmio ou castigo.",
+     "Não ignore se a recusa durar ou vier com outros sintomas."
+    ],
+    "ajuda": [
+     "O tempo sem comer não é o único sinal: a idade, a hidratação e o estado geral também contam. Procure um profissional de saúde se a recusa persistir ou a criança parecer fraca.",
+     "Procure atendimento médico logo se ela não aceitar líquidos, ficar muito sonolenta ou fraca, tiver a boca muito seca, fizer muito pouco xixi ou vomitar várias vezes.",
+     "Ligue 192 (SAMU) se houver desmaio, dificuldade para respirar ou muita dificuldade para acordar."
+    ]
+   }
+  },
+  {
+   "id": "gri",
+   "nome": "Gritos, choro e desregulação emocional",
+   "cat": 1,
+   "pri": 3,
+   "kw": [
+    "grit*",
+    "chor*",
+    "crise*",
+    "agitad*",
+    "agitacao",
+    "nao consegue se acalmar",
+    "nao consegue acalmar",
+    "nao se acalma",
+    "nao acalma",
+    "desregulad*",
+    "desregulacao",
+    "descontrolad*",
+    "meltdown",
+    "birra*",
+    "chilique*",
+    "surto*",
+    "esperneando",
+    "esperneia",
+    "muito nervos*",
+    "explosao"
+   ],
+   "all": [],
+   "resp": {
+    "ac": "Eu entendo como esse momento é cansativo. Você está presente, e isso já ajuda.",
+    "pode": "Gritos e choro intenso podem indicar sobrecarga de sons, luz ou mudanças, cansaço, fome, dor ou dificuldade de expressar o que sente. Cada criança é diferente, e esse momento não é culpa sua nem dela.",
+    "fazer": [
+     "Diminua ruídos e luz e retire estímulos que não sejam necessários.",
+     "Evite perguntas repetidas e não peça explicações agora.",
+     "Use poucas palavras, simples: “Estou aqui. Vai passar.”",
+     "Ofereça um lugar mais tranquilo e, se ajudar, algo que ela goste, sem insistir.",
+     "Respeite o tempo dela e fique por perto, em segurança."
+    ],
+    "evitar": [
+     "Não exija que ela pare de chorar ou que explique o que sente.",
+     "Não grite nem ameace.",
+     "Não ofereça recompensas ou castigos agora.",
+     "Evite várias pessoas falando ao mesmo tempo."
+    ],
+    "ajuda": [
+     "Ligue 192 (SAMU) se houver dificuldade para respirar, desmaio, ferimento ou se você não conseguir manter a segurança.",
+     "Procure um profissional se as crises forem frequentes, longas ou diferentes do habitual.",
+     "Se suspeitar de dor ou febre, leve a criança a um médico."
+    ]
+   }
+  },
+  {
+   "id": "sens",
+   "nome": "Sensibilidade sensorial",
+   "cat": 1,
+   "pri": 3,
+   "kw": [
+    "barulh*",
+    "som alto",
+    "sons altos",
+    "som muito alto",
+    "ruido*",
+    "luz forte",
+    "luzes fortes",
+    "muita luz",
+    "luz demais",
+    "claridade",
+    "sobrecarga*",
+    "sensibilidade*",
+    "sensorial",
+    "nao suporta barulho",
+    "nao suporta som",
+    "nao aguenta barulho",
+    "tampando os ouvidos",
+    "tapando os ouvidos",
+    "tampa os ouvidos",
+    "tapa os ouvidos",
+    "cheiro forte"
+   ],
+   "all": [
+    [
+     [
+      "incomodad*",
+      "nao suporta",
+      "nao aguenta",
+      "odeia",
+      "tem medo"
+     ],
+     [
+      "som",
+      "sons",
+      "ruido",
+      "ruidos",
+      "luz",
+      "luzes",
+      "cheiro",
+      "cheiros",
+      "barulho"
+     ]
+    ]
+   ],
+   "resp": {
+    "ac": "Que bom que você percebeu o que pode estar incomodando. Isso ajuda muito.",
+    "pode": "Algumas crianças sentem sons, luzes, cheiros ou texturas de forma mais intensa, e isso pode causar muito desconforto e até uma crise. Não é frescura nem birra.",
+    "fazer": [
+     "Identifique e reduza o que incomoda: desligue TV e aparelhos, abaixe a luz ou afaste-se do ruído, se der.",
+     "Ofereça um espaço calmo, com pouca luz e pouco som.",
+     "Se ela aceitar, use abafador de ruído, fone ou óculos escuros, sem forçar.",
+     "Respeite a necessidade de se afastar e fique por perto.",
+     "Depois, anote no diário o que provocou o incômodo para perceber padrões."
+    ],
+    "evitar": [
+     "Não obrigue a criança a ficar em um ambiente barulhento.",
+     "Não diga que “não é nada” ou que ela está exagerando.",
+     "Evite tocar na criança sem avisar durante a sobrecarga."
+    ],
+    "ajuda": [
+     "Procure um profissional de saúde se o incômodo for muito intenso, atrapalhar a rotina ou vier com dor de ouvido, febre ou mudança de comportamento.",
+     "Ligue 192 (SAMU) em caso de ferimento grave ou dificuldade para respirar."
+    ]
+   }
+  },
+  {
+   "id": "dia",
+   "nome": "Dificuldade com atividades cotidianas",
+   "cat": 2,
+   "pri": 2,
+   "kw": [
+    "cortar as unhas",
+    "cortar a unha",
+    "cortar unha*",
+    "unha*",
+    "tomar banho",
+    "banho",
+    "banhar",
+    "escovar os dentes",
+    "escovar dente*",
+    "escovacao",
+    "trocar de roupa",
+    "trocar a roupa",
+    "vestir roupa*",
+    "vestir",
+    "lavar o cabelo",
+    "lavar cabelo",
+    "cortar o cabelo",
+    "cortar cabelo",
+    "pentear",
+    "higiene",
+    "sapato*",
+    "fralda*",
+    "desfralde",
+    "sair de casa"
+   ],
+   "all": [],
+   "resp": {
+    "ac": "Essas tarefas podem ser bem difíceis para muitas famílias, e você não está sozinho(a).",
+    "pode": "Higiene e troca de roupa envolvem toque, sons, água, cheiros e mudança de rotina, que podem ser desconfortáveis ou assustadores para a criança. Pode haver também medo, cansaço ou dificuldade de entender o que vem a seguir.",
+    "fazer": [
+     "Não force agora, principalmente se ela estiver muito agitada.",
+     "Tente descobrir o que incomoda: o toque, o som do cortador ou do chuveiro, a temperatura da água, o cheiro ou a textura.",
+     "Divida em pequenas etapas e mostre o que vai acontecer, com figuras ou com “primeiro…, depois…”.",
+     "Apresente os objetos aos poucos, deixando que ela veja e toque antes.",
+     "Ofereça escolhas simples (qual toalha, qual sabonete), respeite as pausas e tente de novo em outro momento calmo."
+    ],
+    "evitar": [
+     "Não segure a criança à força nem use castigos ou ameaças.",
+     "Não faça a tarefa com pressa durante uma crise.",
+     "Não compare com outras crianças."
+    ],
+    "ajuda": [
+     "Converse com o profissional que acompanha a criança (como terapeuta ocupacional ou psicólogo) sobre estratégias para a rotina de higiene.",
+     "Procure avaliação médica se houver dor, ferida ou sinais de infecção nas unhas, na pele ou nos ouvidos.",
+     "Ligue 192 (SAMU) só em emergência, como ferimento grave ou sangramento que não para."
+    ]
+   }
+  },
+  {
+   "id": "sono",
+   "nome": "Dificuldade para dormir",
+   "cat": 3,
+   "pri": 2,
+   "kw": [
+    "nao dorme",
+    "nao quer dormir",
+    "nao consegue dormir",
+    "dificuldade para dormir",
+    "dificuldade de dormir",
+    "insonia",
+    "acordando de noite",
+    "acorda de madrugada",
+    "sem dormir",
+    "dormir*"
+   ],
+   "all": [],
+   "resp": {
+    "ac": "Noites difíceis cansam muito. Obrigado(a) por cuidar, e lembre-se de cuidar de você também.",
+    "pode": "O sono pode ser afetado por excesso de estímulos à noite, mudanças de rotina, desconforto físico (dor, calor, fome, barriga ou ouvido), ansiedade ou sensibilidade a luz e som.",
+    "fazer": [
+     "Diminua luz, telas e barulho aos poucos, uns 30 minutos antes da hora de dormir.",
+     "Mantenha uma rotina previsível, com os mesmos passos todas as noites.",
+     "Observe possíveis desconfortos: roupa, temperatura do quarto, fome, dor.",
+     "Ofereça um objeto de conforto e um ambiente calmo, sem pressa.",
+     "Anote os horários e o que aconteceu antes para conversar com um profissional."
+    ],
+    "evitar": [
+     "Não force a criança a dormir nem use castigos.",
+     "Evite telas e atividades agitadas perto da hora de dormir.",
+     "Não ofereça remédios sem orientação médica."
+    ],
+    "ajuda": [
+     "Procure um profissional de saúde se a dificuldade durar semanas ou prejudicar muito o dia a dia.",
+     "Procure atendimento médico se houver dor, febre, ronco forte com pausas na respiração ou mudança súbita de comportamento.",
+     "Ligue 192 (SAMU) se houver dificuldade para respirar ou muita dificuldade para acordar."
+    ]
+   }
+  }
+ ]
+}
